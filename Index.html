@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/person-circle.svg">
+  <link rel="stylesheet" type="text/css" href="Default.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+    integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <title>TranscomSchooleduc</title>
+</head>
+
+<body>
+
+  <div class="container_1">
+    <div>
+      <div><img src="icons/logo-no-background.png" alt="Page_logo" class="logo"></div>
+      <div class="dashBoard">
+        <img src="icons/speedometer2.svg" alt="icone du tableau de bord"> Tableau de bord
+      </div>
+
+      <div class="Inscription">
+        <img src="icons/people-fill.svg" alt="icone Inscription"> Inscriptions
+      </div>
+
+      <div onmouseover="showActScho()" onmouseleave="hideActScho()">
+        <div class="Act_School">
+          <img src="icons/calendar2-event.svg" alt="icone Activité scolaire" class="calIcon">Activités scolaire<img
+            src="icons/chevron-down.svg" alt="arrow" id="calArrow">
+        </div>
+        <div id="Menu_Act_sco">
+          <a href="#">Activités administratives</a><br>
+          <a href="#">Emploi du temps</a><br>
+          <a href="#">Devoirs/Compositions</a><br>
+        </div>
+      </div>
+
+      <div onmouseover="showGClassMenu()" onmouseleave="hideGClassMenu()">
+        <div class="GestClass">
+          <img src="icons/GestClass.svg" alt="icone Gestion de classes" class="GClassIcon">Gestion de classes<img
+            src="icons/chevron-down.svg" alt="arrowIcon" id="GClassArrow">
+        </div>
+
+        <div id="GClassMenu">
+          <a href="#">Cahiers de texte</a><br>
+          <a href="#">Cahiers de présence</a><br>
+          <a href="#">Cahiers de conduite</a><br>
+          <a href="#">Bordereaux de notes</a>
+        </div>
+      </div>
+
+      <div class="Bulletins">
+        <img src="icons/Bulletins.svg" alt="icone bulletins" class="BullIcon">Bulletins
+      </div>
+
+      <div onmouseover="showDocADmnMenu()" onmouseleave="hideDocADmnMenu()">
+        <div class="DocADmn">
+          <img src="icons/folder_Admn.svg" alt="icone documents administratifs" class="DocADmnIcon">Documents
+          administratifs<img src="icons/chevron-down.svg" alt="arrow" id="DocADmnarrow">
+        </div>
+        <div id="DocADmnMenu">
+          <a href="#">Certificat de scolarité</a><br>
+          <a href="#">Certificat de réussite</a>
+        </div>
+      </div>
+
+      <div class="Msg">
+        <img src="icons/chat-right-text-fill.svg" alt="icone messagerie" class="MsgIcon">Messagerie
+      </div>
+
+      <div class="help">
+        <img src="icons/question-circle-fill.svg" alt="icone aide" class="helpIcon">Aide
+      </div>
+
+      <div class="Disconnect">
+        <img src="icons/box-arrow-right.svg" alt="icone deconexion"><a href=""> déconnexion</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container_2">
+    <div class="tableau_de_bord1">
+      <h1 class="Tableau_de_bord_title">Tableau de bord</h1>
+
+      <div class="salutation">
+        <div class="salutation_nelly">
+          <h2>
+            Hello Nelly !
+          </h2>
+          <p>
+            Bienvenue sur votre plateforme de <br />
+            travail.
+          </p>
+          <p class="gdmorning">Bonne journée !</p>
+        </div>
+        <div>
+          <div class="icon_person"><img src="icons/icons8-home-office-100.png" alt="icon_person1"></div>
+          <div id="clock" onload="currentTime()"></div>
+        </div>
+      </div>
+
+      <h2 class="effectifs_title"> Effectifs</h2>
+
+      <div class="Container_eff">
+        <div class="effTotal_TauxReuss">
+          <div class="effectif_total"><input value="" id="box1" class="effNbre">
+            <div class="Eff">Effectif <br>Total</div>
+            <div class="doughnut1_size"><canvas id="myChart1"></canvas></div>
+          </div>
+          <div class="taux_de_reussite"><input value="" id="box2" class="effNbre">
+            <div class="Eff">Taux de <br>réussite
+            </div>
+            <div class="doughnut2_size"><canvas id="myChart2"></canvas></div>
+          </div>
+        </div>
+
+        <div class="effFilles_Ga">
+          <div class="effectif_filles"><input value="" id="box3" class="effNbre">
+            <div class="Eff">Effectif <br>Filles</div>
+            <div class="doughnut3_size"><canvas id="myChart3"></canvas></div>
+          </div>
+
+          <div class="effectif_Garçons"> <input value="" id="box4" class="effNbre">
+            <div class="Eff">Effectif <br>Garçons</div>
+            <div class="doughnut4_size"><canvas id="myChart4"></canvas></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activit_jour">
+        <h2 class="actofDayTitle">Activité du jour</h2>
+
+        <div class="actDayContent">
+          <div onmouseover="showArrow1()" onmouseleave="hideArrow1()">
+            <div><img src="icons/chevron-right.svg" alt="arrow_icon" id="arrow1">Planification des devoirs</div>
+          </div>
+          <div onmouseover="showArrow2()" onmouseleave="hideArrow2()">
+            <div class="actDayContent"><img src="icons/chevron-right.svg" alt="arrow_icon" id="arrow2">Rencontre avec le
+              personnel</div>
+          </div>
+          <div onmouseover="showArrow3()" onmouseleave="hideArrow3()">
+            <div class="actDayContent"><img src="icons/chevron-right.svg" alt="arrow_icon" id="arrow3">Rencontre avec
+              les
+              parents d'élèves</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="tableau_de_bord2">
+
+      <div>
+        <div class="searchIcon"><img src="icons/search.svg" alt="search_icon"></div>
+        <div class="msgIcon"><img src="icons/envelope.svg" alt="message_icon"></div>
+        <div class="notifIcon"><img src="icons/bell.svg" alt="notification_icon"><input value="" id="box5"></div>
+        <div onmouseover="showUserOpt()">
+          <div class="user_photoIcon"><img src="icons/person-circle.svg" alt="users_photo_icon"><img
+              src="icons/chevron-down.svg" alt="arrow" id="userAArrow"></div>
+        </div>
+      </div>
+      <div class="container_calendar">
+        <div class="calendar"></div>
+      </div>
+      <div>
+        <div id="drop_down_UserName" onmouseleave="hideUserOpt()">
+          <div class="drop_down_UserName_icon"><img src="icons/person-fill.svg" alt="profile_icon"><a href="">AHOZON
+              Nelly</a></div>
+          <div class="drop_down_UserName_icon"><img src="icons/Settings.svg" alt="parameters_icon"><a
+              href="">Paramètres</a></div>
+          <div class="drop_down_UserName_icon"><img src="icons/box-arrow-right.svg" alt="deconnexion_icon"><a
+              href="">Déconnexion</a></div>
+        </div>
+      </div>
+
+      <div class="Progression_annee">
+        <h2>Progression de l'année</h2>
+        <div class="doughnut5_size"><canvas id="myChart5"></canvas></div>
+      </div>
+
+    </div>
+
+  </div>
+  <script type="text/javascript" src="Script.js"></script>
+  <script type="text/javascript" src="Calendar_and_Hours.js"></script>
+  <script type="text/javascript" src="Script_Chart_Js.js"></script>
+</body>
+
+</html>
