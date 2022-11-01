@@ -650,6 +650,237 @@ body {
   height: 130px;
 }
 @media screen and (min-width:900px){
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+:root {
+  --calendar-bg-color: rgb(219, 219, 219);
+  --calendar-font-color: rgb(0, 0, 0);
+  --weekdays-border-bottom-color: #404040;
+  --calendar-date-hover-color: #505050;
+  --calendar-current-date-color: #9b9b9b;
+  --calendar-today-color: linear-gradient(to bottom, rgb(37, 128, 67), rgb(37, 128, 67));
+  --calendar-today-innerborder-color: transparent;
+  --calendar-nextprev-bg-color: transparent;
+  --next-prev-arrow-color: rgb(0, 0, 0);
+  --calendar-border-radius: 20px;
+  --calendar-prevnext-date-color: #484848;
+}
+
+/*Calendar's Variables grrrrrrrrrrrrr*/
+
+body {
+  background-color: rgba(250, 243, 232, 0.884);
+  position: relative;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 12px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.container_1 {
+  padding: 0px 0px 0px 5px;
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.logo {
+  width: 90px;
+  height: 90px;
+  margin: 10px 30px;
+}
+
+.dashBoard {
+  padding: 10px 0px 0px 0px;
+}
+
+.dashBoard:Hover {
+  font-weight: 700;
+  border-right-style: outset;
+  border-right-width: 5px;
+  border-color: rgb(7, 201, 72);
+  padding: 5px;
+}
+
+.dashBoard img {
+  margin: 0px 5px -4px 0px;
+}
+
+.Inscription {
+  padding: 10px 0px 0px 0px;
+}
+
+.Inscription:Hover {
+  font-weight: 700;
+  border-right-style: outset;
+  border-right-width: 5px;
+  border-color: rgb(7, 201, 72);
+  padding: 5px;
+}
+
+.Inscription img {
+  margin: 0px 5px -4px 0px;
+}
+
+.calIcon {
+  margin: 0px 3px -4px 0px;
+}
+
+.Act_School {
+  padding: 10px 0px 0px 0px;
+}
+
+.Act_School:hover {
+  font-weight: 700;
+  border-right-style: outset;
+  border-right-width: 5px;
+  border-color: rgb(7, 201, 72);
+  padding: 5px;
+}
+
+#calArrow {
+  margin: 0px 0px -5px 32px;
+}
+
+#Menu_Act_sco {
+  display: none;
+  padding: 5px 0px 0px 25px;
+  font-size: 10px;
+}
+
+#Menu_Act_sco a {
+  text-decoration: none;
+  color: gray;
+}
+
+.GClassIcon {
+  margin: 0px 3px -4px 0px;
+}
+
+.GestClass {
+  padding: 10px 0px 0px 0px;
+}
+
+.GestClass:hover {
+  font-weight: 700;
+  border-right-style: outset;
+  border-right-width: 5px;
+  border-color: rgb(7, 201, 72);
+  padding: 5px;
+}
+
+#GClassMenu {
+  display: none;
+  padding: 5px 0px 0px 25px;
+  font-size: 10px;
+}
+
+#GClassArrow {
+  margin: 0px 0px -6px 25px;
+}
+
+#GClassMenu a {
+  text-decoration: none;
+  color: gray;
+}
+
+.BullIcon {
+  margin: 0px 3px -4px 0px
+}
+
+.Bulletins {
+  padding: 10px 0px 0px 0px;
+}
+
+.Bulletins:hover {
+  font-weight: 700;
+  border-right-style: outset;
+  border-right-width: 5px;
+  border-color: rgb(7, 201, 72);
+  padding: 5px;
+}
+
+.DocADmnIcon {
+  margin: 0px 1px -4px 0px;
+}
+
+.DocADmn {
+  padding: 10px 0px 0px 0px;
+}
+
+.DocADmn:hover {
+  font-weight: 700;
+  border-right-style: outset;
+  border-right-width: 5px;
+  border-color: rgb(7, 201, 72);
+  padding: 4px;
+}
+
+#DocADmnarrow {
+  margin: 0px 0px -6px 1px;
+}
+
+#DocADmnMenu {
+  display: none;
+  padding: 5px 0px 0px 25px;
+  font-size: 10px;
+}
+
+#DocADmnMenu a {
+  text-decoration: none;
+  color: gray;
+}
+
+.MsgIcon {
+  margin: 0px 3px -4px 0px
+}
+
+.Msg {
+  padding: 10px 0px 0px 0px;
+}
+
+.Msg:hover {
+  font-weight: 700;
+  border-right-style: outset;
+  border-right-width: 5px;
+  border-color: rgb(7, 201, 72);
+  padding: 5px;
+}
+
+.helpIcon {
+  margin: 0px 3px -4px 0px
+}
+
+.help {
+  padding: 10px 0px 0px 0px;
+}
+
+.help:hover {
+  font-weight: 700;
+  border-right-style: outset;
+  border-right-width: 5px;
+  border-color: rgb(7, 201, 72);
+  padding: 5px;
+}
+
+.Disconnect {
+  padding: 268px 0px 0px 45px;
+}
+
+.Disconnect a {
+  color: gray;
+  text-decoration: none;
+}
+
+.Disconnect img {
+  margin: 0px 5px -4px 0px
+}
   .container_2 {
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
@@ -659,6 +890,417 @@ body {
   height: 100vh;
   display: flex;
   }
+}
+
+.Tableau_de_bord_title {
+  font-weight: 700;
+  font-size: 30px;
+  padding: 0px 0px 20px 0px;
+
+}
+
+.tableau_de_bord1 {
+  color: rgb(0, 0, 0);
+}
+
+.salutation {
+  background-color: rgba(37, 128, 67, 0.822);
+  color: rgb(255, 255, 255);
+  border-radius: 40px;
+  display: flex;
+  width: 730px;
+  padding: 14px 0px 14px 50px;
+  height: 150px;
+  position: relative;
+}
+
+.salutation_nelly {
+  font-size: 12px;
+}
+
+.salutation_nelly h2 {
+  margin-bottom: 16px;
+}
+
+.gdmorning {
+  padding-top: 16px
+}
+
+.icon_person {
+  margin: -50px 0px 0px 380px;
+
+}
+
+#clock {
+  color: rgb(255, 255, 255);
+  margin: 60px 0px 0px 410px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.effectifs_title {
+  font-weight: 700px;
+  margin: 15px 0px 15px 0px;
+}
+
+.Container_eff {
+  display: flex;
+}
+
+.effTotal_TauxReuss {
+  display: flex;
+  flex-direction: column;
+}
+
+.effFilles_Ga {
+  display: flex;
+  flex-direction: column;
+}
+
+.effectif_total {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  border-style: outset;
+  margin: 0px 25px 15px 0px;
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+  height: 90px;
+  font-size: 20px;
+}
+
+.doughnut1_size {
+  width: 80px;
+  height: 80px;
+  margin-left: 83px
+}
+
+.taux_de_reussite {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  border-style: outset;
+  margin: 0px 25px 15px 0px;
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+  height: 90px;
+  font-size: 20px;
+}
+
+.doughnut2_size {
+  width: 80px;
+  height: 80px;
+  margin-left: 80px
+}
+
+.effectif_filles {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  border-style: outset;
+  margin: 0px 25px 15px 0px;
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+  height: 90px;
+  font-size: 20px;
+}
+
+.doughnut3_size {
+  width: 80px;
+  height: 80px;
+  margin-left: 85px
+}
+
+.effectif_Garçons {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  border-style: outset;
+  margin: 0px 25px 15px 0px;
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+  height: 90px;
+  font-size: 20px;
+}
+
+.doughnut4_size {
+  width: 80px;
+  height: 80px;
+  margin-left: 78px
+}
+
+.Eff {
+  margin: 10px 0px 0px 5px;
+  font-weight: 500;
+}
+
+.effNbre {
+  border-style: none;
+  width: 85px;
+  height: 60px;
+  margin-left: 20px;
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.effNbre :read-only {
+  color: rgb(0, 0, 0);
+}
+
+.activit_jour {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 20px;
+  border-style: outset;
+  padding: 15px 0px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  width: 730px;
+  height: 145px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: justify;
+}
+
+.actofDayTitle {
+  margin: 0px 0px 5px 20px;
+}
+
+#arrow1 {
+  margin-left: 20px;
+  margin-bottom: -3px;
+}
+
+#arrow2 {
+  margin-left: 20px;
+  margin-bottom: -3px;
+}
+
+#arrow3 {
+  margin-left: 20px;
+  margin-bottom: -3px;
+}
+
+.actDayContent {
+  margin: 5px 0px 5px 0px;
+  font-weight: 100;
+}
+
+.tableau_de_bord2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.searchIcon {
+  position: absolute;
+  padding: 0px 0px 0px 100px;
+}
+
+.msgIcon {
+  position: absolute;
+  padding: 0px 0px 0px 150px;
+}
+
+.notifIcon {
+  position: absolute;
+  padding: 0px 0px 0px 200px;
+}
+
+#box5 {
+  position: absolute;
+  margin: -5px 0px 0px -3px;
+  font-size: 8px;
+  height: 9px;
+  width: 9px;
+  border-radius: 100px;
+  border-style: none;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.user_photoIcon {
+  position: absolute;
+  margin: 0px 0px 0px 240px;
+}
+
+#drop_down_UserName {
+  display: none;
+  padding: 5px 10px 5px 10px;
+  margin: -400px 0px 0px 230px;
+  position: absolute;
+  background-color: rgb(248, 244, 237);
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+#drop_down_UserName a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.drop_down_UserName_icon {
+  padding: 6px 5px -6px 0px;
+}
+
+.container_calendar {
+  padding: 30px 0px 0px 20px;
+}
+
+.calendar {
+  position: relative;
+  max-width: 300px;
+  min-width: 280px;
+  background: var(--calendar-bg-color);
+  color: var(--calendar-font-color);
+  margin: 20px auto;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-weight: normal;
+  border-radius: var(--calendar-border-radius);
+}
+
+.calendar-inner {
+  padding: 10px 10px;
+}
+
+.calendar .calendar-inner .calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.calendar .calendar-inner .calendar-body div {
+  padding: 4px;
+  min-height: 20px;
+  line-height: 20px;
+  border: 1px solid transparent;
+  margin: 10px 2px 0px;
+}
+
+.calendar .calendar-inner .calendar-body div:nth-child(-n + 7) {
+  border: 1px solid transparent;
+  border-bottom: 1px solid var(--weekdays-border-bottom-color);
+}
+
+.calendar .calendar-inner .calendar-body div:nth-child(-n + 7):hover {
+  border: 1px solid transparent;
+  border-bottom: 1px solid var(--weekdays-border-bottom-color);
+}
+
+.calendar .calendar-inner .calendar-body div>a {
+  color: var(--calendar-font-color);
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+
+.calendar .calendar-inner .calendar-body div:hover {
+  border: 1px solid var(--calendar-date-hover-color);
+  border-radius: 4px;
+}
+
+.calendar .calendar-inner .calendar-body div.empty-dates:hover {
+  border: 1px solid transparent;
+}
+
+.calendar .calendar-inner .calendar-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.calendar .calendar-inner .calendar-today-date {
+  display: grid;
+  text-align: center;
+  cursor: pointer;
+  margin: 3px 0px;
+  background: var(--calendar-current-date-color);
+  padding: 8px 0px;
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-year-month {
+  display: flex;
+  min-width: 100px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next {
+  text-align: right;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-year-label,
+.calendar .calendar-inner .calendar-controls .calendar-year-month .calendar-month-label {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today {
+  background: var(--calendar-today-color);
+  border-radius: 4px;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today:hover {
+  border: 1px solid transparent;
+}
+
+.calendar .calendar-inner .calendar-body .calendar-today a {
+  outline: 2px solid var(--calendar-today-innerborder-color);
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a,
+.calendar .calendar-inner .calendar-controls .calendar-prev a {
+  color: var(--calendar-font-color);
+  font-family: arial, consolas, sans-serif;
+  font-size: 26px;
+  text-decoration: none;
+  padding: 4px 12px;
+  display: inline-block;
+  background: var(--calendar-nextprev-bg-color);
+  margin: 10px 0 10px 0;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a svg,
+.calendar .calendar-inner .calendar-controls .calendar-prev a svg {
+  height: 20px;
+  width: 20px;
+}
+
+.calendar .calendar-inner .calendar-controls .calendar-next a svg path,
+.calendar .calendar-inner .calendar-controls .calendar-prev a svg path {
+  fill: var(--next-prev-arrow-color);
+}
+
+.calendar .calendar-inner .calendar-body .prev-dates,
+.calendar .calendar-inner .calendar-body .next-dates {
+  color: var(--calendar-prevnext-date-color);
+}
+
+.calendar .calendar-inner .calendar-body .prev-dates:hover,
+.calendar .calendar-inner .calendar-body .next-dates:hover {
+  border: 1px solid transparent;
+  pointer-events: none;
+}
+
+.Progression_annee {
+  margin: 460px 0px 5px 120px;
+  position: absolute;
+}
+
+.Progression_annee h2 {
+  margin: 0px 0px 1px -20px;
+}
+
+.doughnut5_size {
+  width: 130px;
+  height: 130px;
+}
   
 }
 
