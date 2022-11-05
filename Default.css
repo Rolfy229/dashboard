@@ -929,7 +929,7 @@ body {
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  width: 110vw;
+  width: 107vw;
   padding: 14px 0px 14px 12px;
   height: 150px;
 }
@@ -967,7 +967,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 0px 0px 40px;
+  padding: 0px 0px 0px 50px;
 }
 
 .effTotal_TauxReuss {
@@ -1082,7 +1082,7 @@ body {
   padding: 15px 0px 0px 0px;
   display: flex;
   flex-direction: column;
-  width: 110vw;
+  width: 107vw;
   height: 145px;
   font-weight: 600;
   font-size: 14px;
