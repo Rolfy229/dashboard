@@ -967,7 +967,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 45px;
+  padding: 0px 0px 0px 40px;
 }
 
 .effTotal_TauxReuss {
