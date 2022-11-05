@@ -61,6 +61,16 @@ function hideArrow3() {
 
     document.getElementById("arrow3").style.transform = "rotate(0deg)"
 }
+
+function show3crox() {
+    document.getElementById("container_1", "iconClose").style.display = "block"
+    document.getElementById("container_2","iconOpen").style.display = "none"
+}
+function show3lines() {
+    document.getElementById("container_1","iconClose").style.display = "none"
+    document.getElementById("container_2","iconOpen").style.display = "block"
+}
+
 /*numbers in total,percentage 4 boxes and notif box5*/
 document.getElementById("box1").value = 300
 document.getElementById("box2").value = 80 + "%"
