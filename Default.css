@@ -911,12 +911,16 @@ body {
     display: block;
   }
 #iconOpen{
+  width:30px;
+  height: 30px;
   position: relative;
-  margin: 0px 0px -26px 90vw;
+  margin: 0px 0px -30px 90vw;
 }
 #iconClose{
+  width:30px;
+  height: 30px;
   position: absolute;
-  margin: -30px 0px 0px 90vw;
+  margin: -40px 0px 5px 88vw;
 }
 .Tableau_de_bord_title {
   font-weight: 700;
@@ -957,7 +961,7 @@ body {
 }
 
 .icon_person {
-  margin: -155px 0px 0px 72vw;
+  margin: -150px 0px 0px 72vw;
 
 }
 
