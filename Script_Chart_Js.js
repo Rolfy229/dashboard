@@ -241,7 +241,7 @@ window.onload = function () {
 
             const dataLabel = data.datasets[0].data
             const dataPoint = data.datasets[0].data[0]
-            ctx.font = '30px sans-serif';
+            ctx.font = 'Bold 30px sans-serif';
             ctx.fillStyle = options.plugins.Color;
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
